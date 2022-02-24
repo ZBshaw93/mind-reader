@@ -8,7 +8,7 @@
 - Make sure the symbols change between uses so the user doesn't know.
 
 ## Objects
-- Pages
+- Pages ("Views")
   - Contains instructions and buttons
 - Buttons
   - Next
@@ -19,7 +19,7 @@
 
  ## Define Objects and Functions
 
- - Pages
+ - Pages ("Views")
    - Text
      - Text changes at top of page.
   - Subtext
@@ -33,36 +33,36 @@
 - Symbols
   - Symbols -> Array of different symbols.
 
-## Pages
+## Pages ("Views")
 
-Page 1:
+"View" 1:
 - Text - "I can read your mind".
 - goButton displayed.
 
-Page 2:
+"View" 2:
 - Text - "Pick a number from 01-99"
 - nextButton displayed.
 subText - "When you have your number click next".
 - resetButton displayed.
 
-Page 3:
+"View" 3:
 - Text - "Add both digits together to get a new number".
 - nextButton displayed.
 - Subtext - "Ex: 14 is 1+4=5/n" click next to proceed".
 - resetButton displayed.
 
-Page 4:
+"View" 4:
 - Text - "Subtract your new number from the original number".
 - nextButton displayed.
 - SubText - "Ex: 14-5=9 click next to proceed".
 - resetButton displayed.
 
-Page 5:
+"View" 5:
 - Symbols Shows list of numbers with a symbol assigned to each (zero should be the correct symbol)
 - revealButton displayed.
 - subText - "Find your new number and note the symbol beside the number".
 - resetButton displayed.
 
-Page 6:
+"View" 6:
 - Symbol shows correct symbol.
 - subText should say "Your symbol is: " + Symbol.
