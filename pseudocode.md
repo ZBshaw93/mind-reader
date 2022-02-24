@@ -1,23 +1,68 @@
-START
+# Mind Reader Pseudocode
 
-Main Goal:
+## Functionality
 
-Create a single page web app that plays a game with the user to read their mind.
+**Main Goal**: Create a single page web app that plays a game with the user to read their mind. Each page shows different content. The last two pages show symbols and need to change every time the mind reader is reset.
 
-Things to keep in mind:
+### Things to keep in mind
+- Make sure the symbols change between uses so the user doesn't know.
 
-* The focus is to use state management to progress forward to the next view, backward to the previous view, and reset to the first view on the page.
-* By default, the app should prompt the user to click through the single-page app and see a new view for every step.
-* You need to be able to scroll through the numbers to find your symbol (page 5 on the wireframe).
+## Objects
+- Pages
+  - Contains instructions and buttons
+- Buttons
+  - Next
+  - Reset
+  - Reveal
+- Symbols
+ - Should change and randomize every reset.
 
-Objects:
+ ## Define Objects and Functions
 
-1. Button to progress to next view.
-2. Button to go backward to previous view.
-3. Button to reset to first view on the page.
+ - Pages
+   - Text
+     - Text changes at top of page.
+  - Subtext
+    - Text changes at bottom of page.
+  
+- Buttons
+ - nextButton -> Takes user to next page from current page.
+ - resetButton -> Takes user to the first page.
+ - revealButton -> Takes user to the last page.
 
-Objects & Functions
+- Symbols
+  - Symbols -> Array of different symbols.
 
-* Button
-  - INIT onPress()
-  - 
+## Pages
+
+Page 1:
+- Text - "I can read your mind".
+- goButton displayed.
+
+Page 2:
+- Text - "Pick a number from 01-99"
+- nextButton displayed.
+subText - "When you have your number click next".
+- resetButton displayed.
+
+Page 3:
+- Text - "Add both digits together to get a new number".
+- nextButton displayed.
+- Subtext - "Ex: 14 is 1+4=5/n" click next to proceed".
+- resetButton displayed.
+
+Page 4:
+- Text - "Subtract your new number from the original number".
+- nextButton displayed.
+- SubText - "Ex: 14-5=9 click next to proceed".
+- resetButton displayed.
+
+Page 5:
+- Symbols Shows list of numbers with a symbol assigned to each (zero should be the correct symbol)
+- revealButton displayed.
+- subText - "Find your new number and note the symbol beside the number".
+- resetButton displayed.
+
+Page 6:
+- Symbol shows correct symbol.
+- subText should say "Your symbol is: " + Symbol.
